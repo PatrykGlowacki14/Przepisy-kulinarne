@@ -1,1 +1,443 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Donut Community</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0e;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111115;
+    border-bottom: 1px solid #28282e;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ff982f;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff982f;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 105px 20px 75px;
+    background:
+      radial-gradient(ellipse at top, #542c163d, transparent 65%);
+}
+
+.tag {
+    display: inline-block;
+    color: #ffad55;
+    background: #ff982f18;
+    border: 1px solid #ff982f55;
+    border-radius: 30px;
+    padding: 9px 18px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 70px);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff982f;
+}
+
+.hero p {
+    color: #aaa;
+    max-width: 550px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.verify-box {
+    background: #17171d;
+    border: 1px solid #393039;
+    max-width: 440px;
+    margin: 40px auto 0;
+    padding: 28px;
+    border-radius: 16px;
+}
+
+.verify-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.verify-box h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.verify-box p {
+    font-size: 14px;
+}
+
+.verify-btn {
+    width: 100%;
+    margin-top: 23px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #ff982f;
+    color: #111;
+    font-size: 15px;
+    font-weight: bold;
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.notice {
+    margin-top: 15px;
+    color: #ffae61;
+    font-size: 12px;
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 950px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.stat {
+    background: #15151b;
+    border: 1px solid #292930;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: #ff982f;
+    font-size: 27px;
+}
+
+.stat p {
+    color: #888;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px 90px;
+}
+
+.section-title {
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.section-description {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: #17171d;
+    border: 1px solid #303039;
+    border-radius: 13px;
+    padding: 27px;
+    min-height: 190px;
+    opacity: .65;
+}
+
+.card:hover {
+    border-color: #ff982f;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.lock {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #ff982f;
+    font-size: 19px;
+}
+
+.locked-label {
+    display: inline-block;
+    color: #ffae61;
+    background: #ff982f17;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-top: 16px;
+}
+
+/* MARKET */
+.market {
+    margin: 0 20px 80px;
+    padding: 30px;
+    background: #17171d;
+    border: 1px solid #303039;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.market h2 {
+    color: #ff982f;
+    margin-bottom: 12px;
+}
+
+.market p {
+    color: #999;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    border-top: 1px solid #292930;
+    padding: 35px 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+footer span {
+    color: #ff982f;
+}
+
+@media(max-width: 700px) {
+    nav {
+        padding: 0 15px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 11px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🍩 DR DONUT</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#features">Features 🔒</a>
+        <a href="#community">Community 🔒</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="tag">✦ OFFICIAL COMMUNITY EXPERIENCE ✦</div>
+
+    <h1>WELCOME TO<br>
+    <span>DR DONUT COMMUNITY</span></h1>
+
+    <p>
+        Join the community, discover exclusive features,
+        participate in events and connect with other players.
+        Your journey starts here.
+    </p>
+
+    <div class="verify-box">
+
+        <div class="verify-icon">🔐</div>
+
+        <h2>Verification Required</h2>
+
+        <p>
+            Before accessing the Dr Donut Community,
+            you must complete the verification process.
+            All community features are currently locked.
+        </p>
+
+        <button class="verify-btn" disabled>
+            🔒 VERIFY NOW
+        </button>
+
+        <div class="notice">
+            Verification system is currently unavailable.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+<div class="stats">
+
+    <div class="stat">
+        <h2>🔒</h2>
+        <p>Community Members</p>
+    </div>
+
+    <div class="stat">
+        <h2>🔒</h2>
+        <p>Events</p>
+    </div>
+
+    <div class="stat">
+        <h2>🔒</h2>
+        <p>Rewards</p>
+    </div>
+
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+
+    <h2 class="section-title">Explore Features</h2>
+
+    <p class="section-description">
+        Discover everything available in our community.
+        Complete verification to unlock access.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="lock">🔒</div>
+            <div class="card-icon">🏆</div>
+            <h3>Leaderboard</h3>
+            <p>Check rankings and see the best community members.</p>
+            <div class="locked-label">VERIFICATION REQUIRED</div>
+        </div>
+
+        <div class="card">
+            <div class="lock">🔒</div>
+            <div class="card-icon">🎁</div>
+            <h3>Rewards</h3>
+            <p>Discover exclusive rewards and special bonuses.</p>
+            <div class="locked-label">VERIFICATION REQUIRED</div>
+        </div>
+
+        <div class="card">
+            <div class="lock">🔒</div>
+            <div class="card-icon">🎉</div>
+            <h3>Events</h3>
+            <p>Participate in exciting community events.</p>
+            <div class="locked-label">VERIFICATION REQUIRED</div>
+        </div>
+
+        <div class="card">
+            <div class="lock">🔒</div>
+            <div class="card-icon">👥</div>
+            <h3>Community</h3>
+            <p>Meet players and become part of our community.</p>
+            <div class="locked-label">VERIFICATION REQUIRED</div>
+        </div>
+
+        <div class="card">
+            <div class="lock">🔒</div>
+            <div class="card-icon">📜</div>
+            <h3>Rules</h3>
+            <p>Read community rules and important information.</p>
+            <div class="locked-label">VERIFICATION REQUIRED</div>
+        </div>
+
+        <div class="card">
+            <div class="lock">🔒</div>
+            <div class="card-icon">🎧</div>
+            <h3>Support</h3>
+            <p>Get help and find answers to your questions.</p>
+            <div class="locked-label">VERIFICATION REQUIRED</div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COMMUNITY -->
+<section class="market" id="community">
+
+    <h2>🍩 Your Community. Your Story.</h2>
+
+    <p>
+        A new experience is waiting for you.
+        Complete verification to access the community.
+    </p>
+
+</section>
+
+<footer>
+    <p>© 2026 <span>Dr Donut Community</span></p>
+    <p style="margin-top:10px">
+        Community fan project. Not an official Dr Donut website.
+    </p>
+</footer>
+
+</body>
+</html>
+
+
