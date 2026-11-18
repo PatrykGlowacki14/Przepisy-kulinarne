@@ -1,4 +1,85 @@
-<h1>Przepisy kulinarne</h1>
-<h3>Spis treści</h3>
-< a href="Śniadania.html" button><h4>Śniadania</h4></button></a><p> je się zwykle od godziny 7:00 do 11:00
-  
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Donut Community</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101014;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #1c1c24;
+            padding: 40px;
+            border-radius: 18px;
+            text-align: center;
+            width: 340px;
+            box-shadow: 0 0 30px #ff8c0033;
+        }
+
+        h1 {
+            color: #ff9d32;
+            font-size: 30px;
+        }
+
+        p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        button {
+            background: #ff9d32;
+            color: #151515;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: not-allowed;
+            opacity: 0.6;
+            margin-top: 15px;
+        }
+
+        .info {
+            color: #ffbd70;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🍩 Dr Donut Community</h1>
+
+        <p>
+            Welcome to the Dr Donut Community!
+        </p>
+
+        <p>
+            Before joining our community,
+            you must complete the verification process.
+        </p>
+
+        <button disabled>
+            Verify Now
+        </button>
+
+        <div class="info">
+            Verification is currently unavailable.
+        </div>
+    </div>
+
+</body>
+</html>
